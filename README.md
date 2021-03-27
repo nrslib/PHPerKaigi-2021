@@ -2,10 +2,16 @@
 
 セッション内で取り扱ったサンプルコードです。
 
-## セッション予告
+## セッション予告（YouTubeリンク）
+
 
 [![](https://img.youtube.com/vi/r0kZ_yQoe8k/0.jpg)](https://www.youtube.com/watch?v=r0kZ_yQoe8k)
+
+[「なるせ先生のPHP学～PHP8新機能スぺシャル～」(予告15秒ver.)](https://www.youtube.com/watch?v=r0kZ_yQoe8k)
+
 [![](https://img.youtube.com/vi/xustFYOs6dg/0.jpg)](https://www.youtube.com/watch?v=xustFYOs6dg)
+
+[「なるせ先生のPHP学～1人3役なるせ先生編～」](https://www.youtube.com/watch?v=xustFYOs6dg)
 
 ## 関連リンク
 
