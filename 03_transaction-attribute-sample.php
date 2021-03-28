@@ -42,7 +42,7 @@ $handleMethodAttributes = $handleMethod->getAttributes(Transactional::class);
 $needTransaction = count($handleMethodAttributes) !== 0;
 
 // トランザクションを制御しながらメソッドを呼び出す
-// 実際は AOP 的な仕組みにより開発者がこのコードを書くことはない
+// 実際は AOP 的な仕組みを導入して開発者がこのコードを書くことはないようにする
 try {
     if ($needTransaction) {
         DB::beginTransaction();
