@@ -22,12 +22,15 @@ class Constants
 
 $constant = Constants::CONSTANT1;
 
-$fieldAttributeTestClazz = new ReflectionClass(Constants::class);
-$methods = $fieldAttributeTestClazz->getMethods();
-$constants = $fieldAttributeTestClazz->getConstants();
+// Constants クラスから const のフィールド名を取得する
+$constantsClazz = new ReflectionClass(Constants::class);
+$constants = $constantsClazz->getConstants();
 $key = array_search($constant, $constants);
+
+// フィールドに定義された属性を取得する
 $constantReflection = new ReflectionClassConstant(Constants::class, $key);
 $textAttributeReflection = $constantReflection->getAttributes(Text::class)[0];
 $textAttribute = $textAttributeReflection->newInstance();
 
+// 取得された属性のプロパティを取得
 echo $textAttribute->value;

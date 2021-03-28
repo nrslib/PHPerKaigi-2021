@@ -10,11 +10,12 @@ function map(array $array, callable $predicate)
 
 function foldRight($acc, array $elements, callable $f)
 {
+    // 先頭を取得する
     $head = count($elements) > 0 ? $elements[0] : null;
 
     return match (true) {
         $head === null => $acc,
-        default => $f($head, foldRight($acc, array_slice($elements, 1), $f))
+        default => $f($head, foldRight($acc, array_slice($elements, 1), $f)) // 後半の array_slice は先頭以外を取得している（PHP だとリソースをかなり使いそうなので実用性は……）
     };
 }
 

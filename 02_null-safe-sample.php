@@ -16,10 +16,11 @@ class DataContainer
 }
 
 $variable = new DataContainer("msg");
-// コメントアウトすると null のときの挙動が確認できます
+// コメントアウトすると null のときの挙動が確認できる
 //$variable = null;
 $message = $variable?->getMessage() ?? "";
 echo $message;
 
+// いわゆるエルビス演算子
 $message = $variable?->getMessage() ? /* 第二項*/ : "";
 echo $message;
